@@ -5,6 +5,8 @@ import js from "./assets/images/javascript.svg"
 import tailwind from "./assets/images/tailwind.svg"
 import bootstrap from "./assets/images/bootstrap.svg"
 import react_ from "./assets/images/react.svg"
+import profile from "./assets/images/p.jpg"
+
 import "./Home.css"
 
 export default function Home() {
@@ -14,7 +16,7 @@ export default function Home() {
   return (
     <>
       <section className="flex items-center justify-between">
-        <div style={{width: "35rem"}} className="flex ml-24 flex-col gap-3">
+        <div style={{width: "37rem"}} className="flex ml-24 flex-col gap-3">
           <h1 className="text-6xl font-semibold">I am Lukáš Brettl</h1>
           <h2 className="text-6xl font-semibold" >Front-end developer</h2>
           <p className="pr-10 mt-4 text-lg">I'm a student in high school who enjoys building websites and focuses mainly on the front-end. I know my apps aren't the best, but I try to get better every day and learn from my mistakes.</p>
@@ -35,12 +37,13 @@ export default function Home() {
             ["HTML", "CSS", "JavaScript", "Tailwind (I prefer tailwind than bootstrap)", "Bootstrap", "React.js"]
             .map((item, index) => <li className="list-disc text-xl" key={index}>{item}</li>)
             }
+            
           </ul>
-
+          <button className="relative text-center w-20 ml-5 mt-5 pr-5 p-2 text-lg rounded-lg bg-indigo-600 text-white font-semibold ">more <span className="absolute top-2.5 right-2.5">˅</span></button>
           
         </div>
         <div className="relative sm:hidden lg:flex bg-slate-500">
-          <span id="html" style={{animationDelay: delay()}} className="moving flex items-center justify-center absolute right-32 top-4  w-20 aspect-square  overflow-hidden border-2 border-slate-500 rounded-full shadow-lg"><img src={html} alt="html logo" className="w-12"/></span>
+          <span id="html" style={{animationDelay: delay()}} className="moving flex items-center justify-center absolute right-32 top-4  w-20 aspect-square overflow-hidden border-2 border-slate-500 rounded-full shadow-lg"><img src={html} alt="html logo" className="w-12"/></span>
           <span id="css" style={{animationDelay: delay()}} className="moving flex items-center justify-center absolute right-32 top-40  w-20 aspect-square  overflow-hidden border-2 border-slate-500 rounded-full shadow-lg"><img src={css} alt="css logo" className="w-12"/></span>
           <span id="tailwind" style={{animationDelay: delay()}} className="moving flex items-center justify-center absolute right-72 top-36 w-20 aspect-square overflow-hidden border-2 border-slate-500 rounded-full shadow-lg"><img src={tailwind} alt="tailwind logo" className="w-14"/></span>
           <span id="bootstrap"  style={{animationDelay: delay()}} className="moving flex items-center justify-center absolute right-44 top-72 w-20 aspect-square  overflow-hidden border-2 border-slate-500 rounded-full shadow-lg"><img src={bootstrap} alt="bootstrap logo" className="w-14"/></span>
@@ -49,7 +52,21 @@ export default function Home() {
         </div>
       </div>
       <hr className="mt-28 border-2" />
-      <h1>asfda</h1>
+      <footer className="flex pt-5">
+        <div style={{background: "#23272f", border: "2px solid black"}} className="flex relative items-center justify-center flex-wrap w-96 rounded-lg p-4 ml-5 mb-5 text-white">
+          <img src={profile} alt="profile image" className="w-20 aspect-square rounded-full border-2"/>
+          <h3 className="text-2xl ml-4">Lukas-Brettl</h3>
+          
+          <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png" alt="github image" className="absolute top-2 left-2 w-10 rounded-md"/>
+          <a href="https://github.com/Lukas-Brettl" target="_blank" className="mt-4 text-indigo-600 font-medium">https://github.com/Lukas-Brettl</a>
+        </div>
+
+        <div className="flex flex-col justify-between mt-14 mb-5 ml-28">
+          <h3 className="text-3xl">Kontakt</h3>
+          <h4 className="text-lg">email: lukas.brettl@seznam.cz</h4>
+          
+        </div>
+      </footer>
     </>
   )
 }
