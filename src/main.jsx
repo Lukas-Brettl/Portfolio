@@ -4,6 +4,7 @@ import { StrictMode } from 'react'
 import './index.css'
 import Home from './Home.jsx'
 import Projects from "./Projects.jsx";
+import Technologies from "./Technologies.jsx"
 
 
 createRoot(document.getElementById('root'), {
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root'), {
     <StrictMode>
       <Routes>
         <Route path="projects" element={<Projects/>}/>
+        <Route path="technologies" element={<Technologies/>}/>
         <Route index element={<Home/>}/>
       </Routes>
     </StrictMode>

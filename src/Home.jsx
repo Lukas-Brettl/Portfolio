@@ -9,7 +9,7 @@ import profile from "./assets/images/p.jpg"
 import githubLogo from "./assets/images/github-logo.png"
 import instagramLogo from "./assets/images/instagram-logo.jpg"
 import xLogo from "./assets/images/X-logo.jpg"
-
+import myPicture from "./assets/images/my-picture copy.png"
 import "./Home.css"
 
 export default function Home() {
@@ -24,13 +24,16 @@ export default function Home() {
           <h2 className="text-6xl font-semibold" >Front-end developer</h2>
           <p className="pr-10 mt-4 text-lg">I'm a student in high school who enjoys building websites and focuses mainly on the front-end. I know my apps aren't the best, but I try to get better every day and learn from my mistakes.</p>
           <div className="flex items-center mt-6 gap-10">
-            <button className="text-center w-36 p-3 text-xl rounded-lg bg-indigo-600 text-white font-semibold ">my projects</button>
+            <a target="_self" href="/projects"><button className="text-center w-36 p-3 text-xl rounded-lg bg-indigo-600 text-white font-semibold ">my projects</button></a>
+            
             <a href="#" className="text-xl font-bold underline ">technologies I use</a>
           </div>
         </div>
-        
-        <svg style={{width:"40rem"}} className="sm:hidden lg:flex" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 600 600"><path d="M60.07853317260742,292.1466064453125C43.71727625528972,234.55498123168945,23.036648432413738,137.95811716715494,50.654449462890625,118.58638763427734C78.27225049336751,99.21465810139973,153.01047261555988,167.93193689982095,225.78533935546875,175.91622924804688C298.5602060953776,183.9005215962728,465.3141225179036,137.04188028971353,487.30364990234375,166.4921417236328C509.2931772867839,195.9424031575521,414.1361134847005,303.01046498616535,357.7225036621094,352.6177978515625C301.30889383951825,402.22513071695965,198.42931938171387,474.2146708170573,148.82199096679688,464.1361389160156C99.21466255187988,454.05760701497394,76.43979008992513,349.73823165893555,60.07853317260742,292.1466064453125C43.71727625528972,234.55498123168945,23.036648432413738,137.95811716715494,50.654449462890625,118.58638763427734" fill="#5b52f7" transform="matrix(1.0000000000000002,-5.551115123125782e-17,5.551115123125782e-17,1.0000000000000002,36.155044555664006,9.875251770019474)"></path></svg>
-      </section>
+        <div className="relative">
+          <img style={{width:"20rem"}} src={myPicture} alt="My picture" className="absolute left-28 top-16 sm:hidden lg:flex"/>
+          <svg style={{width:"40rem"}} className="sm:hidden lg:flex" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 600 600"><path d="M60.07853317260742,292.1466064453125C43.71727625528972,234.55498123168945,23.036648432413738,137.95811716715494,50.654449462890625,118.58638763427734C78.27225049336751,99.21465810139973,153.01047261555988,167.93193689982095,225.78533935546875,175.91622924804688C298.5602060953776,183.9005215962728,465.3141225179036,137.04188028971353,487.30364990234375,166.4921417236328C509.2931772867839,195.9424031575521,414.1361134847005,303.01046498616535,357.7225036621094,352.6177978515625C301.30889383951825,402.22513071695965,198.42931938171387,474.2146708170573,148.82199096679688,464.1361389160156C99.21466255187988,454.05760701497394,76.43979008992513,349.73823165893555,60.07853317260742,292.1466064453125C43.71727625528972,234.55498123168945,23.036648432413738,137.95811716715494,50.654449462890625,118.58638763427734" fill="#5b52f7" transform="matrix(1.0000000000000002,-5.551115123125782e-17,5.551115123125782e-17,1.0000000000000002,36.155044555664006,9.875251770019474)"></path></svg>
+        </div>
+       </section>
       <div className="flex justify-between pl-20 mt-16 w-full ">
         <div>
           <h2 className="text-4xl font-medium">The web <span className="font-semibold text-indigo-600">technologies</span> I use</h2>
@@ -83,20 +86,12 @@ export default function Home() {
           </div>
 
           <div className="sm:hidden md:block">
-            <h3 className="text-3xl mb-3">My projects</h3>
-            <ul className="text-lg list-disc ml-8">
-              <li>
-                <a href="#">Math app (in proces)</a>
-              </li>
-              <li>
-                <a href="#">Find movie</a>
-              </li>
-              <li>
-                <a href="#">Search Country</a>
-              </li>
-              <li>
-                <a href="#">Modern Calculator</a>
-              </li>
+            <a target="_self" href="/projects" className="text-3xl mb-3 underline">My projects</a>
+            <ul className="text-lg list-disc mt-2 ml-8">
+              <li>Math app (in proces)</li>
+              <li>Weather app</li>
+              <li>Search Country</li>
+              <li>Modern Calculator</li>
               and more...
             </ul>
           </div>

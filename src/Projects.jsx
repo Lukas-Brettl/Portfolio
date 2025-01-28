@@ -1,16 +1,41 @@
-
+import mathAppImg from "./assets/images/mathApp-img.png"
+import searchCountryImg from "./assets/images/searchCountry-img.png"
+import calculatorImg from "./assets/images/calculator-img.png"
+import weatherAppImg from "./assets/images/weatherApp-img.png"
 import Card from "./Card.jsx"
 
 export default function Projects() {
     const cardData = {
-        "Math app":{
-            "name":"Math app",
-            "special": "in the process",
-            "img": "",
-            "info":["e-learning platform", "The app will teach a math topic", "One of my bigest projects"],
-            "try": "",
-            "git": "https://github.com/Lukas-Brettl/MathApp"
-        }
+      "Math app":{
+          "name":"Math app",
+          "special": "in the process",
+          "img": mathAppImg,
+          "info":["E-learning platform", "The app will teach a math topic", "One of my bigest projects"],
+          "try": "",
+          "git": "https://github.com/Lukas-Brettl/MathApp"
+      },
+      "Search Country":{
+        "name": "Search Country",
+        "img": searchCountryImg,
+        "info":["Find information about the country", "use fetch api and restcountries api", "medium project"],
+        "try": "",
+        "git": "https://github.com/Lukas-Brettl/researchCountry"
+      },
+      "Calculator":{
+        "name": "Modern Calculator",
+        "img": calculatorImg,
+        "info":["Can do simple operation (+, -, *, /, %)", "It took a few minutes", "easy project"],
+        "try": "",
+        "git": "https://github.com/Lukas-Brettl/researchCountry"
+      },
+      "Weather App":{
+        "name": "Weather App",
+        "img": weatherAppImg,
+        "info":["Search place and get actual weather", "use fetch api", "Its one of my old project"],
+        "try": "",
+        "git": "https://github.com/Lukas-Brettl/researchCountry"
+      }
+
     }
   return (
     <>
@@ -24,11 +49,13 @@ export default function Projects() {
           ashamed of (I hope).
         </p>
       </div>
-      <fieldset className="mt-24 border-2 border-t-black border-r-transparent border-l-transparent border-b-transparent">
+      <fieldset className="flex mt-24 border-2 border-t-black border-r-transparent border-l-transparent border-b-transparent">
         <legend className="ml-24 text-2xl">Projects</legend>
-        {Object.entries(cardData).map(([key, item]) => {
+        <div className="flex flex-wrap w-full items-center justify-around p-10">
+          {Object.entries(cardData).map(([key, item]) => {
             console.log(item)
             return (<Card key={key} special={item.special} img={item.img} name={item.name} info={item.info} linkTry={item.try} linkGit={item.git} />)})}
+        </div>
       </fieldset>
     </>
   );
