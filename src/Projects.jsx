@@ -2,6 +2,7 @@ import mathAppImg from "./assets/images/mathApp-img.png"
 import searchCountryImg from "./assets/images/searchCountry-img.png"
 import calculatorImg from "./assets/images/calculator-img.png"
 import weatherAppImg from "./assets/images/weatherApp-img.png"
+import portfolioImg from "./assets/images/portfolio-img.png"
 import Card from "./Card.jsx"
 
 export default function Projects() {
@@ -17,7 +18,7 @@ export default function Projects() {
       "Search Country":{
         "name": "Search Country",
         "img": searchCountryImg,
-        "info":["Find information about the country", "use fetch api and restcountries api", "medium project"],
+        "info":["Find information about the country", "Use fetch api and restcountries api", "medium project"],
         "try": "",
         "git": "https://github.com/Lukas-Brettl/researchCountry"
       },
@@ -31,9 +32,16 @@ export default function Projects() {
       "Weather App":{
         "name": "Weather App",
         "img": weatherAppImg,
-        "info":["Search place and get actual weather", "use fetch api", "Its one of my old project"],
+        "info":["Search place and get actual weather", "Use fetch api", "Its one of my old project"],
         "try": "",
         "git": "https://github.com/Lukas-Brettl/researchCountry"
+      },
+      "Portfolio":{
+        "name": "This portfolio",
+        "img": portfolioImg,
+        "info":["Simple portfolio site", "Shows my skills and the technology I use"],
+        "try": "/",
+        "git": "https://github.com/Lukas-Brettl/Portfolio"
       }
 
     }
@@ -51,7 +59,7 @@ export default function Projects() {
       </div>
       <fieldset className="flex mt-24 border-2 border-t-black border-r-transparent border-l-transparent border-b-transparent">
         <legend className="ml-24 text-2xl">Projects</legend>
-        <div className="flex flex-wrap w-full items-center justify-around p-10">
+        <div className="flex flex-wrap w-full items-center justify-around gap-3 p-10">
           {Object.entries(cardData).map(([key, item]) => {
             console.log(item)
             return (<Card key={key} special={item.special} img={item.img} name={item.name} info={item.info} linkTry={item.try} linkGit={item.git} />)})}

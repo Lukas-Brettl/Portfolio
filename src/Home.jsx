@@ -1,10 +1,10 @@
 
-import html from "./assets/images/html-five2.svg"
-import css from "./assets/images/css (1).svg"
-import js from "./assets/images/javascript.svg"
-import tailwind from "./assets/images/tailwind.svg"
-import bootstrap from "./assets/images/bootstrap.svg"
-import react_ from "./assets/images/react.svg"
+import html from "./assets/techImages/html.svg"
+import css from "./assets/techImages/css.svg"
+import js from "./assets/techImages/javascript.svg"
+import tailwind from "./assets/techImages/tailwind.svg"
+import bootstrap from "./assets/techImages/bootstrap.svg"
+import react_ from "./assets/techImages/react.svg"
 import profile from "./assets/images/p.jpg"
 import githubLogo from "./assets/images/github-logo.png"
 import instagramLogo from "./assets/images/instagram-logo.jpg"
@@ -26,7 +26,7 @@ export default function Home() {
           <div className="flex items-center mt-6 gap-10">
             <a target="_self" href="/projects"><button className="text-center w-36 p-3 text-xl rounded-lg bg-indigo-600 text-white font-semibold ">my projects</button></a>
             
-            <a href="#" className="text-xl font-bold underline ">technologies I use</a>
+            <a target="_self" href="/technologies" className="text-xl font-bold underline ">technologies I use</a>
           </div>
         </div>
         <div className="relative">
@@ -45,7 +45,10 @@ export default function Home() {
             }
             
           </ul>
-          <button className="relative text-center w-20 ml-5 mt-5 pr-5 p-2 text-lg rounded-lg bg-indigo-600 text-white font-semibold ">more <span className="absolute top-2.5 right-2.5">˅</span></button>
+          <a target="_self" href="/technologies">
+            <button className="relative text-center w-20 ml-5 mt-5 pr-5 p-2 text-lg rounded-lg bg-indigo-600 text-white font-semibold ">more <span className="absolute top-2.5 right-2.5">˅</span></button>
+          </a>
+          
           
         </div>
         <div className="relative sm:hidden lg:flex bg-slate-500">

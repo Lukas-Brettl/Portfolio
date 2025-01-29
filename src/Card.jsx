@@ -2,7 +2,7 @@ export default function Card(props){
     return(
         <div style={{height: "28rem"}} className="relative w-96 p-3 border-2 rounded-lg bg-white">
             {props.special && <span title={props.special} className="absolute flex justify-center items-center top-3 right-3 rounded-full w-7 aspect-square text-xl font-semibold bg-orange-400 text-white">!</span>}
-            <img src={props.img} alt={props.alt} className=""/>
+            <img src={props.img} alt={props.alt}/>
             <hr />
             <h3 className="mt-3 text-2xl">{props.name}</h3>
             <ul className="ml-6 mt-2 list-disc">
