@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Card(props){
     return(
         <div style={{height: "28rem"}} className="relative w-96 p-3 border-2 rounded-lg bg-white">
@@ -9,10 +11,10 @@ export default function Card(props){
                {props.info.map((item, index) => <li key={index}>{item}</li>)} 
             </ul>
             <div className="absolute bottom-4 right-4 flex justify-end items-center gap-5">
-                <a target={props.linkTry ? "_blank": "_self"} href={props.linkTry} >
+                <Link to={props.linkTry} >
                     {props.linkTry ?<button className="text-center px-6 py-2 text-lg rounded-lg bg-indigo-600 text-white font-semibold">try it</button> : <button className="text-center px-6 py-2 text-lg rounded-lg bg-gray-600 text-white font-semibold" onClick={() =>window.alert(props.special)}>try it</button>}
                     
-                </a>
+                </Link>
                 <a target="_blank" href={props.linkGit} className="text-lg font-semibold underline">
                     link to github
                 </a>
