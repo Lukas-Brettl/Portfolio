@@ -26,6 +26,7 @@ export default function Home() {
           <p className="pr-10 mt-4 text-lg">I'm a student in high school who enjoys building websites and focuses mainly on the front-end. I know my apps aren't the best, but I try to get better every day and learn from my mistakes.</p>
           <div className="flex items-center mt-6 gap-10">
             <a target="_self" href="/projects"><button className="text-center w-36 p-3 text-xl rounded-lg bg-indigo-600 text-white font-semibold ">my projects</button></a>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             <Link to="/technologies" className="text-xl font-bold underline">
               technologies I use
             </Link>
