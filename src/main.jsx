@@ -2,11 +2,11 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './index.css';
-import Home from './Home.js';
-import Projects from "./Projects.js";
-import Technologies from "./Technologies.js";
-import Calculator from "./try/Calculator.js";
-import ResearchCountry from "./try/ResearchCountry.js";
+import Home from './Home.jsx';
+import Projects from "./Projects.jsx";
+import Technologies from "./Technologies.jsx";
+import Calculator from "./try/Calculator.jsx";
+import ResearchCountry from "./try/ResearchCountry.jsx";
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
