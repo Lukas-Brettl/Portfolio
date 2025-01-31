@@ -13,7 +13,7 @@ createRoot(document.getElementById('root'), {
     v7_startTransition: true,
   },
 }).render(
-  <BrowserRouter   future={{
+  <BrowserRouter basename="/Portfolio" future={{
     v7_relativeSplatPath: true,
   }}>
       <Routes>
