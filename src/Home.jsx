@@ -24,9 +24,9 @@ export default function Home() {
           <h2 className="text-6xl font-semibold" >Front-end developer</h2>
           <p className="pr-10 mt-4 text-lg">I'm a student in high school who enjoys building websites and focuses mainly on the front-end. I know my apps aren't the best, but I try to get better every day and learn from my mistakes.</p>
           <div className="flex items-center mt-6 gap-10">
-            <a target="_self" href="/projects"><button className="text-center w-36 p-3 text-xl rounded-lg bg-indigo-600 text-white font-semibold ">my projects</button></a>
+            <a target="_self" href="/Portfolio/projects"><button className="text-center w-36 p-3 text-xl rounded-lg bg-indigo-600 text-white font-semibold ">my projects</button></a>
             
-            <a target="_self" href="/technologies" className="text-xl font-bold underline ">technologies I use</a>
+            <a target="_self" href="/Portfolio/technologies" className="text-xl font-bold underline ">technologies I use</a>
           </div>
         </div>
         <div className="relative">
@@ -89,7 +89,7 @@ export default function Home() {
           </div>
 
           <div className="sm:hidden md:block">
-            <a target="_self" href="/projects" className="text-3xl mb-3 underline">My projects</a>
+            <a target="_self" href="/Portfolio/projects" className="text-3xl mb-3 underline">My projects</a>
             <ul className="text-lg list-disc mt-2 ml-8">
               <li>Math app (in proces)</li>
               <li>Weather app</li>
