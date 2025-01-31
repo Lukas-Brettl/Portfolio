@@ -10,10 +10,9 @@ import ResearchCountry from "./try/ResearchCountry.jsx";
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
-const basename = "/Portfolio"; 
 
 root.render(
-  <BrowserRouter basename={basename}>
+  <BrowserRouter basename="/Portfolio"> {/* NE import.meta.env.BASE_URL */}
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/projects" element={<Projects />} />
@@ -21,4 +20,5 @@ root.render(
       <Route path="/searchCountry" element={<ResearchCountry />} />
       <Route path="/calculator" element={<Calculator />} />
     </Routes>
-  </BrowserRouter>)
+  </BrowserRouter>
+);
