@@ -4,6 +4,7 @@ import calculatorImg from "./assets/images/calculator-img.png"
 import weatherAppImg from "./assets/images/weatherApp-img.png"
 import portfolioImg from "./assets/images/portfolio-img.png"
 import Card from "./Card.jsx"
+import { Link } from 'react-router-dom';
 
 export default function Projects() {
     const cardData = {
@@ -48,7 +49,7 @@ export default function Projects() {
     }
   return (
     <>
-      <a target="_self" href="/" className="absolute top-3 left-3 text-xl bg-white p-2 rounded-md">← Back to home page</a>
+      <Link to="/" className="absolute top-3 left-3 text-xl bg-white p-2 rounded-md">← Back to home page</Link>
       <div className="flex flex-col items-center w-full mt-20">
         <h1 className="text-6xl font-semibold">This is my</h1>
         <h1 className="text-6xl font-semibold text-indigo-600">projects</h1>

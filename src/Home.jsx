@@ -25,13 +25,12 @@ export default function Home() {
           <h2 className="text-6xl font-semibold" >Front-end developer</h2>
           <p className="pr-10 mt-4 text-lg">I'm a student in high school who enjoys building websites and focuses mainly on the front-end. I know my apps aren't the best, but I try to get better every day and learn from my mistakes.</p>
           <div className="flex items-center mt-6 gap-10">
-            <a target="_self" href="/projects"><button className="text-center w-36 p-3 text-xl rounded-lg bg-indigo-600 text-white font-semibold ">my projects</button></a>
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            <Link to="/projects"><button className="text-center w-36 p-3 text-xl rounded-lg bg-indigo-600 text-white font-semibold ">my projects</button></Link>
+
             <Link to="/technologies" className="text-xl font-bold underline">
               technologies I use
             </Link>
             
-            <a target="_self" href="/technologies" className="text-xl font-bold underline ">technologies I use</a>
           </div>
         </div>
         <div className="relative">
@@ -50,9 +49,10 @@ export default function Home() {
             }
             
           </ul>
-          <a target="_self" href="/technologies">
+
+          <Link to="/technologies">
             <button className="relative text-center w-20 ml-5 mt-5 pr-5 p-2 text-lg rounded-lg bg-indigo-600 text-white font-semibold ">more <span className="absolute top-2.5 right-2.5">˅</span></button>
-          </a>
+          </Link>
           
           
         </div>
@@ -94,7 +94,7 @@ export default function Home() {
           </div>
 
           <div className="sm:hidden md:block">
-            <a target="_self" href="/Portfolio/projects" className="text-3xl mb-3 underline">My projects</a>
+            <Link to="/projects" className="text-3xl mb-3 underline">My projects</Link>
             <ul className="text-lg list-disc mt-2 ml-8">
               <li>Math app (in proces)</li>
               <li>Weather app</li>
