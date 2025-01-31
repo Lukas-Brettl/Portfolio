@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react'
 import NoneFlag from "../assets/images/noneFlag.jpg"
 import ComboBox from "./components/combobox.jsx"
+import { Link } from 'react-router-dom'
 
 export default function App(){
   //all states
