@@ -13,7 +13,7 @@ import jquery from "./assets/techImages/jquery.svg"
 import kotlin from "./assets/techImages/kotlin.svg"
 import python from "./assets/techImages/python.svg"
 import sass from "./assets/techImages/sass.svg"
-
+import vite from "./assets/techImages/vite.svg"
 
 export default function Technologies(){
     const technologiesActive = {
@@ -24,6 +24,7 @@ export default function Technologies(){
         "React": react,
         "Git": git,
         "Figma": figma,
+        "Vite": vite,
         "Python": python,
         
     }
@@ -42,6 +43,7 @@ export default function Technologies(){
    
     return(
         <>
+             <a target="_self" href="/" className="absolute top-3 left-3 text-xl bg-white p-2 rounded-md">← Back to home page</a>
             <div className="flex flex-col items-center w-full mt-20">
                 
                 <h1 className="w-1/2 text-center text-5xl font-semibold">These are all <span className="text-indigo-600">technologies</span> <br/> I use or have used </h1>

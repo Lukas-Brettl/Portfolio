@@ -9,7 +9,7 @@ export default function Projects() {
     const cardData = {
       "Math app":{
           "name":"Math app",
-          "special": "in the process",
+          "special": "Project is in the process",
           "img": mathAppImg,
           "info":["E-learning platform", "The app will teach a math topic", "One of my bigest projects"],
           "try": "",
@@ -19,22 +19,23 @@ export default function Projects() {
         "name": "Search Country",
         "img": searchCountryImg,
         "info":["Find information about the country", "Use fetch api and restcountries api", "medium project"],
-        "try": "",
+        "try": "/searchCountry",
         "git": "https://github.com/Lukas-Brettl/researchCountry"
       },
       "Calculator":{
         "name": "Modern Calculator",
         "img": calculatorImg,
         "info":["Can do simple operation (+, -, *, /, %)", "It took a few minutes", "easy project"],
-        "try": "",
-        "git": "https://github.com/Lukas-Brettl/researchCountry"
+        "try": "/calculator",
+        "git": "https://github.com/Lukas-Brettl/Calculator"
       },
       "Weather App":{
         "name": "Weather App",
+        "special": "Old project, doesn't support Vite",
         "img": weatherAppImg,
         "info":["Search place and get actual weather", "Use fetch api", "Its one of my old project"],
         "try": "",
-        "git": "https://github.com/Lukas-Brettl/researchCountry"
+        "git": "https://github.com/Lukas-Brettl/WeatherApp"
       },
       "Portfolio":{
         "name": "This portfolio",
@@ -47,6 +48,7 @@ export default function Projects() {
     }
   return (
     <>
+      <a target="_self" href="/" className="absolute top-3 left-3 text-xl bg-white p-2 rounded-md">← Back to home page</a>
       <div className="flex flex-col items-center w-full mt-20">
         <h1 className="text-6xl font-semibold">This is my</h1>
         <h1 className="text-6xl font-semibold text-indigo-600">projects</h1>

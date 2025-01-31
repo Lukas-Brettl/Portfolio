@@ -10,7 +10,7 @@ export default function Card(props){
             </ul>
             <div className="absolute bottom-4 right-4 flex justify-end items-center gap-5">
                 <a target={props.linkTry ? "_blank": "_self"} href={props.linkTry} >
-                    {props.linkTry ?<button className="text-center px-6 py-2 text-lg rounded-lg bg-indigo-600 text-white font-semibold">try it</button> : <button className="text-center px-6 py-2 text-lg rounded-lg bg-gray-600 text-white font-semibold" onClick={() =>window.alert("This project is not finished yet")}>try it</button>}
+                    {props.linkTry ?<button className="text-center px-6 py-2 text-lg rounded-lg bg-indigo-600 text-white font-semibold">try it</button> : <button className="text-center px-6 py-2 text-lg rounded-lg bg-gray-600 text-white font-semibold" onClick={() =>window.alert(props.special)}>try it</button>}
                     
                 </a>
                 <a target="_blank" href={props.linkGit} className="text-lg font-semibold underline">
