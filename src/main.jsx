@@ -12,13 +12,13 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-  <BrowserRouter basename="/Portfolio"> {/* NE import.meta.env.BASE_URL */}
+  <BrowserRouter basename="/Portfolio"> 
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/Portfolio/projects" element={<Projects />} />
-      <Route path="/Portfolio/technologies" element={<Technologies />} />
-      <Route path="/Portfolio/searchCountry" element={<ResearchCountry />} />
-      <Route path="/Portfolio/calculator" element={<Calculator />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/technologies" element={<Technologies />} />
+      <Route path="/searchCountry" element={<ResearchCountry />} />
+      <Route path="/calculator" element={<Calculator />} />
     </Routes>
   </BrowserRouter>
 );
