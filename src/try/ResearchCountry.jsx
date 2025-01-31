@@ -155,28 +155,31 @@ export default function App(){
     }
 },[search])
   return(
-    <section className='flex w-full h-full items-center justify-between'>
-      <div className="flex flex-col ml-12">
+    <>
+      <Link to="/" className="absolute top-3 left-3 text-xl bg-white p-2 rounded-md">← Back to home page</Link>
+      <section className='flex w-full h-full items-center justify-between'>
+        <div className="flex flex-col ml-12">
 
-        <h1 style={{width: "30rem"}} className='text-6xl font-bold'>Search your country</h1>
-        <h2 style={{width: "23rem"}} className='text-2xl mt-5'>Get information on countries around the world.</h2>
-        <div className='group relative'>
-          <svg width="20" height="20" fill="currentColor" className="absolute left-3 top-11 mt-2.5 text-slate-400 pointer-events-none group-focus-within:text-blue-500" aria-hidden="true">
-            <path fillRule="evenodd" clipRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />
-          </svg>
-        <input onChange={(e) => setSearch(e.target.value)}  type="text" placeholder='Search...' className='relatve bg-white border-slate-500 focus:border-blue-500 border-2 z-10 w-80 h-12 mt-10 pl-10 rounded-lg font-semibold outline-none '/> {/* Input for countries*/}
-        {comboInfo && <ComboBox info={comboInfo} onItemClick={handleItemClick}/>} {/* set combobox*/}
+          <h1 style={{width: "30rem"}} className='text-6xl font-bold'>Search your country</h1>
+          <h2 style={{width: "23rem"}} className='text-2xl mt-5'>Get information on countries around the world.</h2>
+          <div className='group relative'>
+            <svg width="20" height="20" fill="currentColor" className="absolute left-3 top-11 mt-2.5 text-slate-400 pointer-events-none group-focus-within:text-blue-500" aria-hidden="true">
+              <path fillRule="evenodd" clipRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />
+            </svg>
+          <input onChange={(e) => setSearch(e.target.value)}  type="text" placeholder='Search...' className='relatve bg-white border-slate-500 focus:border-blue-500 border-2 z-10 w-80 h-12 mt-10 pl-10 rounded-lg font-semibold outline-none '/> {/* Input for countries*/}
+          {comboInfo && <ComboBox info={comboInfo} onItemClick={handleItemClick}/>} {/* set combobox*/}
+          </div>
+
+
         </div>
-
-
-      </div>
- 
-      <aside className='relative flex flex-col items-center w-72 pb-3 mr-16 border-2 border-slate-500 rounded bg-white'> 
-        <img src={flag ? flag : NoneFlag} alt="flag" className='w-auto h-32 mt-8 border shadow' /> 
-        <h2 className='text-center mt-2 text-2xl font-semibold w-64 overflow-clip'>{search? search : "Country"}</h2>
-        {isLoading ? (<h1 className='absolute flex justify-center items-center top-20 p-3 text-3xl font-semibold rounded-lg bg-white w-40'>Loading...</h1>) : (information && information)} {/* add loading text if it takes long time to load informations */}
-      </aside>
-    </section>
+  
+        <aside className='relative flex flex-col items-center w-72 pb-3 mr-16 border-2 border-slate-500 rounded bg-white'> 
+          <img src={flag ? flag : NoneFlag} alt="flag" className='w-auto h-32 mt-8 border shadow' /> 
+          <h2 className='text-center mt-2 text-2xl font-semibold w-64 overflow-clip'>{search? search : "Country"}</h2>
+          {isLoading ? (<h1 className='absolute flex justify-center items-center top-20 p-3 text-3xl font-semibold rounded-lg bg-white w-40'>Loading...</h1>) : (information && information)} {/* add loading text if it takes long time to load informations */}
+        </aside>
+      </section>
+    </>
 
   )
 }
